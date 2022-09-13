@@ -83,7 +83,7 @@ pwd
 docker run -p 3000:3000 -v /app/node_modules -v $(pwd):/ 925e1fe34ff25af
 ```
 
-# Docker Compose CMD
+# Docker Compose dev CMD
 
 ```sh
 docker-compose --version
@@ -96,4 +96,16 @@ docker-compose up -d
 docker-compose up --build
 
 docker-compose down
+```
+
+# Docker Prod CMD
+
+```sh
+docker build .
+docker build -t pritamkhose/docker_frontend .
+docker run -p 8080:80 2567da9ec8b0f6a649cbe
+
+docker run -p 8080:80 pritamkhose/docker_frontend
+docker push pritamkhose/docker_frontend
+docker pull pritamkhose/docker_frontend
 ```

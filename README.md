@@ -96,6 +96,10 @@ docker-compose up -d
 docker-compose up --build
 
 docker-compose down
+
+docker compose -f docker-compose.dev.yml
+docker compose -f docker-compose.dev.yml up -d
+docker compose -f docker-compose.dev.yml down 
 ```
 
 # Docker Prod CMD
@@ -108,4 +112,10 @@ docker run -p 8080:80 2567da9ec8b0f6a649cbe
 docker run -p 8080:80 pritamkhose/docker_frontend
 docker push pritamkhose/docker_frontend
 docker pull pritamkhose/docker_frontend
+
+docker compose up
+docker compose up -d
+docker compose down
 ```
+
+- [Docker multiple Compose files](https://docs.docker.com/compose/extends/)

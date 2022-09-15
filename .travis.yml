@@ -8,7 +8,7 @@ before_install:
   - docker build -t pritamkhose/docker_frontend -f Dockerfile.dev .
 
 script:
-  - docker run -e CI=true pritamkhose/docker_frontend npm run test -- -- coverage
+  - docker run -e CI=true pritamkhose/docker_frontend npm run test
 
 deploy:
   provider: elasticbeanstalk
